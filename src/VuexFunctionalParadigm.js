@@ -251,7 +251,7 @@ class VuexFunctionalParadigm {
   }
 
   _immutable (obj) {
-    return typeof obj === 'object' ? { ...obj } : obj
+    return typeof obj === 'object' && obj.constructor.name === 'Object' ? { ...obj } : obj
   }
 
   /**
