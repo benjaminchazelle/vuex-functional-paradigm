@@ -1,0 +1,52 @@
+{
+  "name": "vuex-functional-paradigm",
+  "version": "1.0.0",
+  "description": "A way to functionally manage the Vuex store enhanced with a mechanism of functional dependencies within the state",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "prepublish": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminchazelle/vuex-functional-paradigm.git"
+  },
+  "keywords": [
+    "vuex",
+    "redux",
+    "store",
+    "functional",
+    "pogramming",
+    "paradigm",
+    "state",
+    "mutation",
+    "action",
+    "getter",
+    "factory",
+    "dependency",
+    "dependencies"
+  ],
+  "author": "Benjamin Chazelle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjaminchazelle/vuex-functional-paradigm/issues"
+  },
+  "homepage": "https://github.com/benjaminchazelle/vuex-functional-paradigm#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "jest": "^25.4.0",
+    "rollup": "^2.7.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.3.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "exclude": "node_modules/**"
+  }
+}
