@@ -94,6 +94,7 @@ Topodiag / dependency graph optim
 
 doc
 
+npm ignore 
 
 ## Licence
 

@@ -399,7 +399,7 @@ class VuexFunctionalParadigm {
      */
   getStore (module) {
     if (!(module in this.modules)) {
-      return undefined
+      throw new Error(`The module "${module}" does not exist`);
     }
 
     const state = this.factoryState(module)
@@ -607,7 +607,7 @@ class VuexFunctionalParadigm {
      */
   getHelpers (module, store) {
     if (!(module in this.modules)) {
-      return undefined
+      throw new Error(`The module "${module}" does not exist`);
     }
 
     const actionsHelper = this.factoryActionsHelper(module, store)
@@ -625,10 +625,11 @@ class VuexFunctionalParadigm {
 
   /**
      * Get the helpers objects, related to the root module, dedicated to inject the functional logic in a component
+     * @param store
      * @returns {{}|{readonly, getters: {}, actions: {}}}
      */
-  getRootHelpers () {
-    return this.getHelpers('')
+  getRootHelpers (store) {
+    return this.getHelpers('', store)
   }
 }
 

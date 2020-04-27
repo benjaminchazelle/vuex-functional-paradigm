@@ -1,3 +1,3 @@
-const VuexFunctionalParadigm = require("./dist/vuex-functional-paradigm");
+const VuexFunctionalParadigm = require("./src/VuexFunctionalParadigm");
 
 module.exports = VuexFunctionalParadigm;
