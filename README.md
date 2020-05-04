@@ -94,7 +94,12 @@ Topodiag / dependency graph optim
 
 doc
 
-npm ignore 
+npm ignore
+
+
+$apply et functiona laction check return exist / undefined is not returned 
+
+check unknwon module/key/subkey in $apply and fucntional action
 
 ## Licence
 

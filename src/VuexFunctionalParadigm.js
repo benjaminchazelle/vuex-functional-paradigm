@@ -340,7 +340,7 @@ class VuexFunctionalParadigm {
             const commitRootState = this._immutable(rootState)
             const commitState = this._immutable(
               mutations[i].module === ''
-                ? state
+                ? rootState
                 : rootState[mutations[i].module]
             )
             let commitSelf = this._immutable(commitState[mutations[i].key])
