@@ -313,4 +313,24 @@ describe("_parseDependencies", () => {
         })
     });
 
+    it("Access root state and state via dynamic arguments", () => {
+        const applyFunction = (_self_, _state_, _rootState_) => {
+            console.log(_state_['A']);
+            console.log(_state_["B"]);
+            console.log(_state_[`C`]);
+            console.log(_state_.D);
+
+            console.log(_rootState_['E']);
+            console.log(_rootState_["F"]);
+            console.log(_rootState_[`G`]);
+            console.log(_rootState_.H);
+        };
+
+        const dependencies = FunctionalParadigm._parseDependencies("module", applyFunction.toString());
+
+        expect(dependencies).toEqual({
+            'module': ['A', 'B', 'C', 'D'],
+            '': ['E', 'F', 'G', 'H']
+        })
+    });
 })
