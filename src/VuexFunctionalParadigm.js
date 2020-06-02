@@ -58,8 +58,9 @@ class VuexFunctionalParadigm {
 
     let rawArgs = applyFunctionExpression.match(/\(([^)]*)\)/);
 
-    console.log(applyFunctionExpression)
-    console.log("$", rawArgs)
+    if(null === rawArgs) {
+      return {};
+    }
 
     let [selfArg, stateArg, rootStateArg] = rawArgs[1].split(",").map(arg => arg.trim());
 

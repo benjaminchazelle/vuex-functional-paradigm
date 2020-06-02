@@ -333,4 +333,12 @@ describe("_parseDependencies", () => {
             '': ['E', 'F', 'G', 'H']
         })
     });
+
+    it("Access nothing via dynamic arguments", () => {
+
+        const dependencies = FunctionalParadigm._parseDependencies("module", "e=>e");
+
+        expect(dependencies).toEqual({
+        })
+    });
 })
