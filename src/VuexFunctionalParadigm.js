@@ -58,6 +58,9 @@ class VuexFunctionalParadigm {
 
     let rawArgs = applyFunctionExpression.match(/\(([^)]*)\)/);
 
+    console.log(applyFunctionExpression)
+    console.log("$", rawArgs)
+
     let [selfArg, stateArg, rootStateArg] = rawArgs[1].split(",").map(arg => arg.trim());
 
     // eslint-disable-next-line no-misleading-character-class
