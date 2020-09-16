@@ -1,6 +1,6 @@
 {
   "name": "vuex-functional-paradigm",
-  "version": "1.0.0",
+  "version": "0.4.1",
   "description": "A way to functionally manage the Vuex store enhanced with a mechanism of functional dependencies within the state",
   "main": "index.js",
   "scripts": {
